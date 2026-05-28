@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "URL Dector - Safe Web",
+  "version": "1.0",
+  "description": "Checks the current URL against the URL-DECTOR machine learning model to verify if it is safe or malicious.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

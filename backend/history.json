@@ -1,5 +1,47 @@
 [
   {
+    "url": "http://192.168.1.1/login",
+    "prediction": "malware",
+    "confidence": 0.9416,
+    "timestamp": "2026-05-28T11:23:52.919906"
+  },
+  {
+    "url": "https://dashboard.render.com/web/new?onboarding=active",
+    "prediction": "benign",
+    "confidence": 0.5652,
+    "timestamp": "2026-05-28T11:23:38.412445"
+  },
+  {
+    "url": "https://dashboard.render.com/web/new?onboarding=active",
+    "prediction": "benign",
+    "confidence": 0.5652,
+    "timestamp": "2026-05-28T11:20:48.883002"
+  },
+  {
+    "url": "https://mail.google.com/mail/u/0/?hl=ar",
+    "prediction": "benign",
+    "confidence": 1.0,
+    "timestamp": "2026-05-28T11:05:50.526264"
+  },
+  {
+    "url": "http://hacked-by-anonymous-team.com/",
+    "prediction": "malware",
+    "confidence": 0.93,
+    "timestamp": "2026-05-28T10:50:29.240246"
+  },
+  {
+    "url": "https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=en-US",
+    "prediction": "benign",
+    "confidence": 1.0,
+    "timestamp": "2026-05-28T10:47:16.331019"
+  },
+  {
+    "url": "https://gemini.google.com/app/62b7afb56b88f1a4?hl=en-IN",
+    "prediction": "benign",
+    "confidence": 1.0,
+    "timestamp": "2026-05-28T10:47:04.489550"
+  },
+  {
     "url": "http://free-crack-software-download.exe-update.com",
     "prediction": "malware",
     "confidence": 0.9704,
@@ -256,47 +298,5 @@
     "prediction": "phishing",
     "confidence": 0.9751,
     "timestamp": "2026-05-28T08:29:11.941175"
-  },
-  {
-    "url": "http://free-crack-software-download.ru",
-    "prediction": "phishing",
-    "confidence": 0.9751,
-    "timestamp": "2026-05-28T08:28:34.158509"
-  },
-  {
-    "url": "http://free-crack-software-download.ru",
-    "prediction": "phishing",
-    "confidence": 0.9751,
-    "timestamp": "2026-05-28T08:28:18.915571"
-  },
-  {
-    "url": "http://free-crack-software-download.ru",
-    "prediction": "phishing",
-    "confidence": 0.9751,
-    "timestamp": "2026-05-28T08:28:03.103313"
-  },
-  {
-    "url": "http://system-security-fix-alert.cn",
-    "prediction": "phishing",
-    "confidence": 0.9879,
-    "timestamp": "2026-05-28T08:27:42.015572"
-  },
-  {
-    "url": "http://system-security-fix-alert.cn",
-    "prediction": "phishing",
-    "confidence": 0.97,
-    "timestamp": "2026-05-28T08:14:59.639983"
-  },
-  {
-    "url": "http://system-security-fix-alert.cn",
-    "prediction": "phishing",
-    "confidence": 0.97,
-    "timestamp": "2026-05-28T08:01:06.461979"
-  },
-  {
-    "url": "http://download-anti-virus-patch.tk",
-    "prediction": "phishing",
-    "confidence": 0.9692,
-    "timestamp": "2026-05-28T08:00:56.930494"
   }
 ]

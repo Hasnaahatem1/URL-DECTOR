@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberGuard | Model Analytics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- Cache busting v8 -->
+  <link rel="stylesheet" href="/static/style.css?v=9">
+</head>
+<body>
+
+  <!-- Enterprise Navbar (No Account) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="brand-icon">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span class="brand-text">CyberGuard</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/" class="nav-link">Scanner</a>
+        <a href="/analytics" class="nav-link active">Analytics</a>
+      </nav>
+      <div class="nav-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">System Active</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <div class="page-header">
+      <h1 class="page-title">Model Analytics Dashboard</h1>
+      <p class="page-desc">Academic-grade performance metrics for the Random Forest detection engine.</p>
+    </div>
+
+    <div class="metrics-section">
+      <h3 class="section-subtitle">MULTI-CLASS EVALUATION RESULTS (4 Classes)</h3>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-title">Accuracy</span>
+          <span class="metric-value text-blue" id="metric-accuracy">--</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-title">Precision (Weighted)</span>
+          <span class="metric-value text-dark" id="metric-precision">--</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-title">Recall (Weighted)</span>
+          <span class="metric-value text-blue" id="metric-recall">--</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-title">F1-Score (Macro)</span>
+          <span class="metric-value text-dark" id="metric-f1">--</span>
+        </div>
+        <div class="metric-card" style="border-left: 4px solid var(--accent-main);">
+          <span class="metric-title">AUC ROC (OVR)</span>
+          <span class="metric-value text-blue" id="metric-auc">--</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="chart-section">
+      <div class="chart-card">
+        <div class="chart-header">
+          <h3 class="section-subtitle">Feature Importance</h3>
+          <p class="section-desc">Top lexical and structural indicators influencing the model's decisions.</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="feature-chart"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/static/app.js?v=8"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberGuard | Enterprise URL Security</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Cache busting v8 -->
+  <link rel="stylesheet" href="/static/style.css?v=8">
+</head>
+<body>
+
+  <!-- Enterprise Navbar (No Account) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="brand-icon">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span class="brand-text">CyberGuard</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/" class="nav-link active">Scanner</a>
+        <a href="/analytics" class="nav-link">Analytics</a>
+      </nav>
+      <div class="nav-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">System Active</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <!-- Hero / Search Section -->
+    <section class="hero">
+      <h1 class="hero-title">Real-Time Threat Detection</h1>
+      <p class="hero-desc">Paste a URL below. Our AI engine will automatically scan it instantly.</p>
+      
+      <div class="search-container">
+        <div class="input-wrapper" id="input-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="url-input" class="url-input" placeholder="https://example.com/login..." autocomplete="off" spellcheck="false">
+          
+          <!-- Scan Indicators -->
+          <div id="scan-state" class="scan-state hidden">
+            <div class="spinner"></div>
+            <span class="state-text">Scanning...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="scanner-results" class="results-section hidden">
+      <div class="verdict-card" id="verdict-card">
+        <div class="verdict-header">
+          <div class="verdict-icon" id="verdict-icon"></div>
+          <div class="verdict-info">
+            <h2 id="verdict-title">Analysis Complete</h2>
+            <p id="verdict-url" class="mono-text">---</p>
+          </div>
+        </div>
+        <div class="verdict-score-box">
+          <span class="score-label">Confidence Score</span>
+          <span class="score-value" id="confidence-val">0%</span>
+        </div>
+      </div>
+
+      <div class="reasons-container" id="reasons-container">
+        <h3 class="section-subtitle">Threat Intelligence Indicators</h3>
+        <div class="reasons-grid" id="reasons-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section">
+      <div class="section-header">
+        <h3 class="section-subtitle">Live Scan Log</h3>
+        <button class="btn-secondary" onclick="clearHistory()">Clear Cache</button>
+      </div>
+      <div class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Target URL</th>
+              <th>Verdict</th>
+              <th>Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="history-tbody">
+            <tr><td colspan="4" class="empty-state">No scans recorded yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/static/app.js?v=8"></script>
+</body>
+</html>
